@@ -18,6 +18,9 @@ header h1{
 	background-repeat: no-repeat;
 	padding-left: 75px;
 	float: left;
+	font-size: 28px;
+	font-weight: 700;
+	background-size: contain;
 }
 header a{
 	color: #FFFFFF;
@@ -40,4 +43,22 @@ nav ul{
 nav ul li{
 
 	display: inline-block;
+}
+
+img{
+	display: block;
+	width: 100%;
+
+}
+
+#noticias-destacadas figcaption{
+	background-color: #333333;
+	padding: 15px;
+
+}
+
+#noticias-destacadas h2{
+	color: #FFFFFF;
+	font-size: 32px;
+	font-weight: 700;
 }
