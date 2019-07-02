@@ -146,7 +146,7 @@
       ///////////////////////////////////////////
       /* Interfaz dinámica: Generador de Noticias */
       let ajax = new XMLHttpRequest()
-      ajax.open("GET", "https://api.sheety.co/e5e5bc76-bf40-41cc-8440-b9ae425dbc93")
+      ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Fdeportes%2F")
       ajax.onload = function(){ //<-- Funciones Anonimas
         if( ajax.status == 200 ){ //<-- Respuesta Existosa!
 
@@ -158,8 +158,8 @@
 
           let noticias = JSON.parse(ajax.response)//<-- Conversion
 
-            noticias.forEach(function(noticia){
-              crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
+            noticias.items.forEach(function(noticia){
+              crearNoticia(noticia.title, noticia.author, noticia.description, noticia.enclosure.link)
 
             })
 
